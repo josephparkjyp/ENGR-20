@@ -91,3 +91,14 @@ else
     warning("There could be an issue, double check");
 end
 end
+
+function plotUpdate(generations)
+    for i = 1:length(generations)
+        [row, col] = find(generations{i} == 1)
+        cla
+        scatter(col, row)
+        pause(0.1)
+    end
+end
+
+plotUpdate(generations)
